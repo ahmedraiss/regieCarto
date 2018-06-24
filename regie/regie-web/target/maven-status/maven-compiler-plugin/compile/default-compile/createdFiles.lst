@@ -1,0 +1,10 @@
+ma\gov\ancfcc\regie\web\action\SaisieAffaireInitAction.class
+ma\gov\ancfcc\regie\web\bean\DemandeBean.class
+ma\gov\ancfcc\regie\web\bean\AgentBean.class
+ma\gov\ancfcc\regie\web\action\LoginAction.class
+ma\gov\ancfcc\regie\web\bean\NatureCarteBean.class
+ma\gov\ancfcc\regie\web\bean\CarteTypeBean.class
+ma\gov\ancfcc\regie\web\bean\EchelleCarteBean.class
+ma\gov\ancfcc\regie\web\bean\CarteBean.class
+ma\gov\ancfcc\regie\web\bean\CategorieCarteBean.class
+ma\gov\ancfcc\regie\web\bean\SupportCarteBean.class

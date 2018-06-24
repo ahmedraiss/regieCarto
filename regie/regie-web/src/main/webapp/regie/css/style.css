@@ -1,0 +1,57 @@
+
+body, html {
+    height: 100%;
+}
+.bg { 
+    /* The image used */
+    background-image: url("../img/authentification.jpg");
+
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}                    
+                    
+.form-simple .font-small {
+  font-size: 0.8rem; }
+
+
+.form-simple input[type=text]:focus:not([readonly]) {
+  border-bottom: 1px solid #ff3547;
+  -webkit-box-shadow: 0 1px 0 0 #ff3547;
+  box-shadow: 0 1px 0 0 #ff3547; }
+
+.form-simple input[type=text]:focus:not([readonly]) + label {
+  color: #4f4f4f; }
+
+
+.form-simple input[type=password]:focus:not([readonly]) + label {
+  color: #4f4f4f; }
+  
+.table-wrapper {
+    display: block;
+    max-height: 300px;
+    overflow-y: auto;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+.card {
+    background-color: rgba(229, 228, 255, 0.2);
+}
+@media (max-width: 768px) {
+    .navbar:not(.top-nav-collapse) {
+        background: #3f51b5 !important;
+    } 
+}
+
+@media (max-width: 740px) {
+    .full-height,
+    .full-height body,
+    .full-height header,
+    .full-height header .view {
+        height: 1040px; 
+    } 
+}                    
+                    

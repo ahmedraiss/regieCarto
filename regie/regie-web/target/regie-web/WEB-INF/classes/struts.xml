@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	<constant name="struts.custom.i18n.resources" value="global" />
+
+	<!-- Page not found 404 -->
+	<!-- <bean type="com.opensymphony.xwork2.UnknownHandler" name="handler" -->
+	<!-- class="ma.gov.ancfcc.gvv.web.handler.InvalidRequests" /> -->
+
+	<package name="default" namespace="/" extends="struts-default">
+
+		<!-- Actions -->
+		<action name="index">
+			<result>/index.jsp</result>
+		</action>
+
+		<!-- Login -->
+		<action name="login"
+			class="ma.gov.ancfcc.regie.web.action.LoginAction" method="login">
+			<result name="success" type="redirectAction">saisieaffaire</result>
+			<result name="error">/index.jsp</result>
+		</action>
+
+		<action name="logout"
+			class="ma.gov.ancfcc.regie.web.action.LoginAction" method="logout">
+			<result name="success">/index.jsp</result>
+		</action>
+		<!-- /Login -->
+
+
+		<action name="saisieaffaire"
+			class="ma.gov.ancfcc.regie.web.action.SaisieAffaireInitAction"
+			method="init">
+			<result>/SaisieAffaire.jsp</result>
+		</action>
+
+
+		<action name="saisieaffairesupport"
+			class="ma.gov.ancfcc.regie.web.action.SaisieAffaireInitAction"
+			method="support">
+			<result name="success" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">inputStream</param>
+			</result>
+		</action>
+
+		<action name="saisieaffairecarte"
+			class="ma.gov.ancfcc.regie.web.action.SaisieAffaireInitAction"
+			method="carte">
+			<result name="success" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">inputStream</param>
+			</result>
+		</action>
+
+		<action name="saisieaffaireechelle"
+			class="ma.gov.ancfcc.regie.web.action.SaisieAffaireInitAction"
+			method="echelle">
+			<result name="success" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">inputStream</param>
+			</result>
+		</action>
+
+		<action name="saisieaffairePanier"
+			class="ma.gov.ancfcc.regie.web.action.SaisieAffaireInitAction"
+			method="achat">
+			<result name="success" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">inputStream</param>
+			</result>
+		</action>
+
+		<action name="saisieaffairePrixCarte"
+			class="ma.gov.ancfcc.regie.web.action.SaisieAffaireInitAction"
+			method="cartePrix">
+			<result name="success" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">inputStream</param>
+			</result>
+		</action>
+
+		<action name="saisieaffaireremoveAchat"
+			class="ma.gov.ancfcc.regie.web.action.SaisieAffaireInitAction"
+			method="removeAchat">
+			<result name="success" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">inputStream</param>
+			</result>
+		</action>
+
+
+		<action name="facture">
+			<result>/facture.jsp</result>
+		</action>
+		<action name="recouvrement">
+			<result>/recouvrement.jsp</result>
+		</action>
+
+		<action name="saisieaffairePrixCarteSave"
+			class="ma.gov.ancfcc.regie.web.action.SaisieAffaireInitAction"
+			method="enregisterAchat">
+			<result type="redirectAction">saisieaffaire</result>
+		</action>
+		
+		
+
+	</package>
+
+</struts>
